@@ -1,0 +1,39 @@
+<table class="table table-info table-striped mt-5">
+  <thead>
+    <tr class="text-center">
+      <th colspan="5">
+        <a href="/addItem"><button class="btn btn-primary">Agregar</button></a>
+      </th>
+    </tr>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">nombre</th>
+      <th scope="col">precio</th>
+      <th scope="col">imagen</th>
+      <th class="text-center" scope="col">Acciones</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    {{#each data}}
+      <tr>
+
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{presentacion}}</td>
+        <td>${{precio}}</td>
+        <td><img src={{imageURL}} alt="{{name}}" /></td>
+        <td class="text-center">
+          <a href="/handleEdit/{{id}}"><button
+              class="btn btn-danger btn-sm"
+            >Borrar</button></a>
+          <a href="/handleEdit/{{id}}"><button
+              class="btn btn-warning btn-sm"
+            >Cambiarr</button></a>
+
+        </td>
+      </tr>
+
+    {{/each}}
+  </tbody>
+</table>

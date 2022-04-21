@@ -1,0 +1,53 @@
+<form action="/editProduct" method="POST" enctype="multipart/form-data">
+  <input type="text" name="id" value="{{product.id}}" hidden />
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      value="{{product.name}}"
+    />
+
+  </div>
+  <div class="mb-3">
+    <label for="precio" class="form-label">Precio</label>
+    <input
+      type="text"
+      class="form-control"
+      id="precio"
+      name="precio"
+      value="{{product.price}}"
+    />
+  </div>
+  
+    
+  </div>
+  {{! utilizamos un input oculto para enviar el valor de la propiedad image en caso de que no haya cambiado
+  el campo relativo a la imagen... en ese caso, seguira siendo la misma}}
+  <input type="text" value={{product.image}} name="prevImage" hidden />
+
+
+  </div>
+  <div class="mb-3">
+    <label for="imageFile" class="form-label">Imagen</label>
+    <input type="file" class="form-control" id="imageFile" name="imageFile" />
+  </div>
+  
+
+  </div>
+
+  <input type="submit" value="Cambiar" class="btn btn-primary" />
+  <a href="/deleteProduct/{{product.id}}"><input
+      type="button"
+      value="Borrar"
+      class="btn btn-danger"
+    /></a>
+  <a href="/"><input
+      type="button"
+      value="Cancelar"
+      class="btn btn-secondary"
+    /></a>
+
+</form>

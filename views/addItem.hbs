@@ -1,0 +1,32 @@
+<form action="/addItem" method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="name" name="name" />
+
+  </div>
+  <div class="mb-3">
+    <label for="precio" class="form-label">precio</label>
+    <input type="text" class="form-control" id="precio" name="precio" />
+  </div>
+  
+ 
+
+  </div>
+  <div class="mb-3">
+    <label for="imageFile" class="form-label">Imagen</label>
+    <input type="file" class="form-control" id="imageFile" name="imageFile" />
+  </div>
+
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Precio</label>
+    <input type="text" class="form-control" id="price" name="price" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">confirmar</button>
+  <a href="/"><input
+      type="button"
+      value="cancelar"
+      class="btn btn-secondary"
+    /></a>
+</form>

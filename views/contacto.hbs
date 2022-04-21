@@ -1,0 +1,43 @@
+ 
+      
+    
+ <section class="container-form">
+     
+            <form action="/contacto" method="POST" id="contactForm" class="contactForm my-5 p-5">
+            <h2>Formulario de contacto</h2>
+            
+            {{#if statusMessage}}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+             {{statusMessage}}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>
+            {{/if}}
+            {{#each arrWarnings}}
+            <div class="alert alert-danger" role="alert">
+            {{msg}}
+            </div>
+            {{/each}}
+               
+                <label for="name" hidden>ingrese nombre</label> 
+                <input type=" text" id="name" name="name" placeholder="Nombre..."autofocus
+                {{#if formData.name}} value="{{formData.name}}"{{/if}}>
+                 
+                 <label for="lastName"hidden>ingrese apellido</label> 
+                <input type=" text" id="lastName" name="lastName" placeholder="Apellido..."
+                {{#if formData.lastName}} value="{{formData.lastName}}"{{/if}}>
+               
+                <label for="email"hidden>ingrese email</label>
+                <input type="text" name="email" id="email" placeholder="email..."
+                 {{#if formData.email}} value="{{formData.email}}"{{/if}}>
+                
+                <label for="message"hidden>ingrese mensaje</label>
+                <textarea name="message" id="message" cols="30" rows="10">{{formData.message}}</textarea>
+               
+                <input type="submit" value="Enviar">
+                </form>
+
+
+            
+        </section>
+    
+  
